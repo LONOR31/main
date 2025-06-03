@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена | Моя семья – мой космос</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4fc3f7;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4fc3f7;
+        }
+
+        .not-found {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .not-found h1 {
+            font-size: 72px;
+            color: #4fc3f7;
+            margin: 0;
+        }
+        .not-found p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .btn {
+            background-color: #4fc3f7;
+            color: #121212;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #333;
+        }
+        footer a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+        @media (max-width: 796px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .not-found h1 {
+                font-size: 48px;
+            }
+            .not-found p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Моя семья – мой космос</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="schedule.html">Расписание конкурсов</a></li>
+                <li><a href="competition.html">Записать на конкурс</a></li>
+            </ul>
+        </nav>
+    <button class="theme-toggle" onclick="window.location.href='index-light.html'"></button>
+    </header>
+
+    <div class="not-found">
+        <h1>404</h1>
+        <p>Страница не найдена</p>
+        <p>К сожалению, запрашиваемая вами страница не существует или была перемещена.</p>
+        <a href="index.html" class="btn">Вернуться на главную</a>
+    </div>
+
+    <footer id="contacts">
+        <div>
+            <a href="tel:+74842234567">+7 (4842) 23-45-67</a> |
+            <a href="mailto:family@cosmos.ru">family_cosmos@gmail.ru</a>
+        </div>
+        <nav>
+            <ul style="display: flex; justify-content: center; gap: 15px; list-style: none; padding: 0;">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index-light.html">Главная-светлая</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="competition.html">Конкурс</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="404.html">Страница не найдена</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Моя семья – мой космос</p>
+    </footer>
+</body>
+</html>
