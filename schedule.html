@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание конкурсов | Моя семья – мой космос</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4fc3f7;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4fc3f7;
+        }
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4fc3f7;
+        }
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        .schedule th, .schedule td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .schedule th {
+            background-color: #252525;
+            color: #4fc3f7;
+        }
+        .time-slot {
+            width: 80px;
+        }
+        .competition-cell {
+            width: 100px;
+            height: 100px;
+            background-color: #4fc3f7;
+            color: #121212;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .competition-cell.full {
+            background-color: #f44336;
+            color: white;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+        .btn {
+            background-color: #4fc3f7;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #333;
+        }
+        footer a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+        @media (max-width: 796px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .schedule {
+                display: block;
+                overflow-x: auto;
+            }
+            .container {
+                margin: 15px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Моя семья – мой космос</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="competition.html">Записать на конкурс</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" onclick="window.location.href='index-light.html'"></button>
+    </header>
+
+    <div class="container">
+        <h1>Расписание конкурсов</h1>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #4fc3f7;"></div>
+                <span>Есть места</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #f44336;"></div>
+                <span>Нет мест</span>
+            </div>
+        </div>
+
+        <table class="schedule" style="margin-left: -190px;">
+            <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>9:00-10:00</th>
+                    <th>10:00-11:00</th>
+                    <th>11:00-12:00</th>
+                    <th>12:00-13:00</th>
+                    <th>13:00-14:00</th>
+                    <th>14:00-15:00</th>
+                    <th>15:00-16:00</th>
+                    <th>16:00-17:00</th>
+                    <th>17:00-18:00</th>
+                    <th>18:00-19:00</th>
+                    <th>19:00-20:00</th>
+                    <th>20:00-21:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-slot">Космический рисунок</td>
+                    <td><div class="competition-cell">5</div></td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">7</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">6</div></td>
+                    <td><div class="competition-cell">8</div></td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell">5</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                </tr>
+                <tr>
+                    <td class="time-slot">Семейная песня</td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell">6</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">5</div></td>
+                    <td><div class="competition-cell">7</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">1</div></td>
+                </tr>
+                <tr>
+                    <td class="time-slot">Космический костюм</td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell">6</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell">5</div></td>
+                    <td><div class="competition-cell">7</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell">6</div></td>
+                </tr>
+                <tr>
+                    <td class="time-slot">Семейное фото</td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell">5</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell">6</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell">5</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                </tr>
+                <tr>
+                    <td class="time-slot">Космическая история</td>
+                    <td><div class="competition-cell">6</div></td>
+                    <td><div class="competition-cell">8</div></td>
+                    <td><div class="competition-cell">3</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">5</div></td>
+                    <td><div class="competition-cell">7</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                    <td><div class="competition-cell">2</div></td>
+                    <td><div class="competition-cell">4</div></td>
+                    <td><div class="competition-cell">6</div></td>
+                    <td><div class="competition-cell full">0</div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="account.html" class="btn">Записаться на конкурс</a>
+    </div>
+
+    <footer id="contacts">
+        <div>
+            <a href="tel:+74842234567">+7 (4842) 23-45-67</a> |
+            <a href="mailto:family@cosmos.ru">family_cosmos@gmail.ru</a>
+        </div>
+        <nav>
+            <ul style="display: flex; justify-content: center; gap: 15px; list-style: none; padding: 0;">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index-light.html">Главная-светлая</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="competition.html">Конкурс</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="404.html">Страница не найдена</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Моя семья – мой космос</p>
+    </footer>
+</body>
+</html>

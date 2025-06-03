@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя семья – мой космос</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #D3D3D3;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: ;
+        }
+
+        hr {
+            margin: 0px 10px 0px 0px;
+            width: 100%;
+            background: linear-gradient(to bottom, white, grey);
+            height: 5px;
+            border: 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4fc3f7;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4fc3f7;
+        }
+        .theme-toggle {
+            background: #D3D3D3;
+            border: none;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .slider {
+            margin: 30px auto;
+            width: 40%;
+            overflow: hidden;
+            border: 1px solid grey;
+            border-radius: 10px;
+        }
+        .slide {
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+        }
+        .slide img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .rating {
+            color: #ffd700;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .btn {
+            background-color: #4fc3f7;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid grey;
+        }
+        .competitions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .competition-card {
+            width: 80%;
+            height: 95%;
+            background-color: #D3D3D3;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid grey;
+            text-align: center;
+        }
+        footer {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid grey;
+        }
+        footer a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+        @media (max-width: 796px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .competitions {
+                grid-template-columns: 1fr;
+            }
+            .slider {
+                width: 95%;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Моя семья – мой космос</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="schedule.html">Расписание конкурсов</a></li>
+                <li><a href="competition.html">Записать на конкурс</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#competitions">Конкурсы</a></li>
+                <li><a href="#search">Поиск</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" onclick="window.location.href='index.html'">Тёмная тема</button>
+    </header>
+    <hr>
+
+    <div class="slider">
+        <div class="slide">
+            <img src="https://cdn.culture.ru/images/22e29921-3c6d-56fd-ba50-3aa4b413d8f3" alt="Конкурс 1" width="700">
+            <h3>Космический рисунок</h3>
+            <p>Нарисуйте свою семью в космическом пространстве!</p>
+            <div class="rating">★★★★☆</div>
+            <button class="btn">Подробнее</button>
+        </div>
+    </div>
+
+    <section id="login" style="margin-left: 557px; margin-right: 557px">
+        <h2 align="center">Авторизация</h2>
+        <form style="margin-left: 200px">
+            <div>
+                <label>Email: <input style="margin-left: 30px; width: 30%; padding: 8px; border-radius: 4px; border: 1px solid #333; background: white; color: black;" type="email" placeholder="Ваш email"></label>
+            </div>
+            <div>
+                <label>Пароль: <input style="margin-left: 15px; width: 30%; padding: 8px; border-radius: 4px; border: 1px solid #333; background: white; color: black;" type="password" placeholder="Ваш пароль"></label>
+            </div>
+            <button type="submit" class="btn" style="margin-top: 20px;">Войти</button>
+            <a style="margin-left: 16px" href="#">Забыли пароль?</a>
+        </form>
+    </section>
+
+    <section id="about">
+        <h2 align="center">О нас</h2>
+        <img style="border: 1px solid black;border-radius: 10px;" src="https://cdn.promodj.com/afs/849ac8f5ee727c4aa417aaeebf996a7312%3Aresize%3A2000x2000%3Asame%3A84c100" alt="О нас" width="593">&#8193;<img style="border: 1px solid black;border-radius: 10px;" src="https://sun1-27.userapi.com/s/v1/ig2/TPRVvNGTjH5V6jj0z491TUG5UAWlowX0iBcwSR64OdW0LkZeNJq88sGP4D1-9HY88NUWWGJb1yGM3Vi7EYkUHY-V.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&u=HwlkD6cZ721jVXVEqgGpi1KCmBoU94oatPbpTKabXcE&cs=807x454" alt="О нас" width="593">&#8193;<img style="border: 1px solid black;border-radius: 10px;" src="https://i.ytimg.com/vi/roMJALiHtFI/maxresdefault.jpg" alt="О нас" width="593">
+        <p align="center">Мы - организация "Моя семья – мой космос", которая проводит семейные конкурсы с 2010 года. Наша миссия - укрепление семейных ценностей через творчество и совместную деятельность.</p>
+    </section>
+
+    <section id="welcome">
+        <h2 align="center">Приветствие от организаторов</h2>
+        <video width="700" controls style="margin-left: 560px;">
+            <source src="https://skills.junior-it.ru/work/scpolvtsp2tcxru6bsiqrx0lyuxkhgrj/video/hello.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </section>
+
+    <section id="competitions">
+        <h2 align="center">Конкурсы</h2>
+        <div class="competitions" style="margin-left: 75px">
+            <div class="competition-card">
+                <img style="border: 1px solid black;border-radius: 10px;" src="https://cdn.culture.ru/images/22e29921-3c6d-56fd-ba50-3aa4b413d8f3" alt="Конкурс 1" width="400" height="250">
+                <h3>Космический рисунок</h3>
+                <p>Рисуем семью в космосе</p>
+                <p>Участников: 124</p>
+                <div class="rating">★★★★☆</div>
+                <button class="btn">Записаться</button>
+            </div>
+            <div class="competition-card">
+                <img style="border: 1px solid black;border-radius: 10px;" src="https://avatars.mds.yandex.net/i?id=9899e30128dbf85744659035cbd56fd3_l-3730166-images-thumbs&n=13" alt="Конкурс 2" width="400" height="250">
+                <h3>Семейная песня</h3>
+                <p>Сочините песню о семье</p>
+                <p>Участников: 87</p>
+                <div class="rating">★★★☆☆</div>
+                <button class="btn">Записаться</button>
+            </div>
+            <div class="competition-card">
+                <img style="border: 1px solid black;border-radius: 10px;" src="https://cdn.spbdnevnik.ru/uploads/block/image/761605/__medium_PliXubNiL1k.jpg.jpg" alt="Конкурс 3" width="400" height="250">
+                <h3>Космический костюм</h3>
+                <p>Создайте костюм для семьи</p>
+                <p>Участников: 156</p>
+                <div class="rating">★★★★★</div>
+                <button class="btn">Записаться</button>
+            </div>
+            <div class="competition-card">
+                <img style="border: 1px solid black;border-radius: 10px;" src="https://cdn.culture.ru/images/e76cefdc-171b-5e5b-924f-b5382d7f4baa" alt="Конкурс 4" width="400" height="250">
+                <h3>Семейное фото</h3>
+                <p>Сделайте креативное фото</p>
+                <p>Участников: 203</p>
+                <div class="rating">★★★★☆</div>
+                <button class="btn">Записаться</button>
+            </div>
+            <div class="competition-card">
+                <img style="border: 1px solid black;border-radius: 10px;" src="https://sun9-80.userapi.com/impf/c627922/v627922443/1cd4c/_1rDTlJTJR4.jpg?size=807x572&quality=96&sign=48bb19cf7af624553c6a39cedfed995f&c_uniq_tag=ubqvLXY4yz6xSjE70J6t-P59GvhXdCBTmz0XINW4hPk&type=album" alt="Конкурс 5" width="400" height="250">
+                <h3>Космическая история</h3>
+                <p>Напишите историю о семье в космосе</p>
+                <p>Участников: 92</p>
+                <div class="rating">★★★☆☆</div>
+                <button class="btn">Записаться</button>
+            </div>
+        </div>
+    </section>
+    <section id="search" style="margin-left: 600px; margin-right: 600px">
+    <div align="center">
+        <h2>Поиск конкурсов</h2>
+        <input type="text" placeholder="Название конкурса" list="suggestions" style="width: 22%; padding: 8px; border-radius: 4px; border: 1px solid #333; background: white; color: black;">
+        <datalist id="suggestions">
+            <option value="Космический рисунок">
+            <option value="Семейная песня">
+            <option value="Космический костюм">
+            <option value="Семейное фото">
+            <option value="Космическая история">
+        </datalist>
+        <br>
+        <button class="btn" style="margin-top: 5px">Поиск</button>
+    </div>
+    </section>
+
+    <section id="reviews" style="margin-left: 600px; margin-right: 600px">
+        <h2 align="center">Отзывы</h2>
+        <div style="overflow: hidden; position: relative; height: 200px; margin-left: 10px">
+            <div style="position: absolute; width: 300%; display: flex;">
+                <div style="width: 33.33%; padding: 10px;">
+                    <h4><img src="https://avatars.mds.yandex.net/i?id=6d7c1443d0e277c05a08d91047ae83101de0d19a-5279994-images-thumbs&n=13" alt="Иван" width="15" style="border-radius: 50%;"> Иван</h4>
+                    <p>Отличный конкурс, вся семья участвовала с удовольствием!</p>
+                    <small>15.05.2024</small>
+                </div>
+                <div style="width: 33.33%; padding: 10px;">
+                    <img src="media/images/user2.jpg" alt="Ольга" width="50" style="border-radius: 50%;">
+                    <h4>Ольга</h4>
+                    <p>"Организация на высшем уровне, будем участвовать снова."</p>
+                    <small>22.04.2024</small>
+                </div>
+                <div style="width: 33.33%; padding: 10px;">
+                    <img src="media/images/user3.jpg" alt="Алексей" width="50" style="border-radius: 50%;">
+                    <h4>Алексей</h4>
+                    <p>"Дети в восторге, спасибо за такие замечательные конкурсы."</p>
+                    <small>10.03.2024</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscribe" style="margin-left: 600px; margin-right: 600px">
+        <h2 align="center">Подписка на новости</h2>
+        <form style="background: white; padding: 20px; border-radius: 8px; max-width: 500px; margin: 0 auto;">
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px;">Email:</label>
+                <input type="email" placeholder="Ваш email" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #333; background: white; color: black;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="checkbox" id="agree" style="margin-right: 10px;">
+                <label for="agree">Я согласен на обработку персональных данных</label>
+            </div>
+            <button type="submit" class="btn">Подписаться</button>
+        </form>
+    </section>
+
+    <footer id="contacts">
+        <div>
+            <a href="tel:+74842234567">+7 (4842) 23-45-67</a> |
+            <a href="mailto:family@cosmos.ru">family_cosmos@gmail.ru</a>
+        </div>
+        <nav>
+            <ul style="display: flex; justify-content: center; gap: 15px; list-style: none; padding: 0;">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index-light.html">Главная-светлая</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="competition.html">Конкурс</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="404.html">Страница не найдена</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Моя семья – мой космос</p>
+    </footer>
+</body>
+</html>
