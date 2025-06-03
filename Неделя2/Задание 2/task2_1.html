@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <style>
+            header {
+            background-image: url('https://images.wallpaperscraft.com/image/single/wall_stone_surface_203646_2560x1440.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80px;
+            width: 100%;
+            }
+
+            nav {
+                font-size: 18px;
+                font-family: "Arial";
+                text-align: center;
+                margin: 30;
+            }
+
+            nav a {
+                color: black;
+                text-decoration: none;
+                margin: 0 30px;
+                padding-bottom: 1px;
+                border-bottom: 5px solid black;
+                display: inline-block;
+            }
+            main h1 {
+                font-size: 40;
+                text-align: center;
+                font-family: "Arial";
+                margin: 45;
+                font-weight: normal;
+            }
+
+            .images-container {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 80px;
+
+            }
+
+            .image-block {
+                position: relative;
+            }
+
+            .image-block::before {
+                content: "";
+                position: absolute;
+                left: -15px;
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                border-left: 10px dotted black;
+            }
+
+            .image-block img {
+                width: 200px;
+                height: 150px;
+                object-fit: cover;
+                display: block;
+            }
+
+            main p {
+                font-family: "Arial";
+                border: 1px solid black;
+                border-radius: 15px;
+                margin: 30px;
+                padding: 10;
+
+            }
+
+            footer {
+				background-color: black;
+				padding: 3px;
+			}
+
+			footer p {
+				background-color: white;
+				padding: 5px;
+                font-family: "Arial";
+                margin: 9;
+			}
+        </style>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <nav>
+            <a href="#schedule">Расписание</a>
+            <a href="#about_classes">О занятиях</a>
+            <a href="#club_address">Адреса клубов</a>
+        </nav>
+        <main>
+            <h1>Болдеринг</h1>
+            <div class="images-container">
+                <div class="image-block">
+                    <img src="https://unitramp.ru/image/catalog/zaly-pod-klych/skalodromy/g1.jpg" alt="Image 1">
+                </div>
+                <div class="image-block">
+                    <img src="https://i.pinimg.com/originals/34/ea/91/34ea9139bc92388bb2a6f8ba9df94d51.jpg" alt="Image 2">
+                </div>
+                <div class="image-block">
+                    <img src="https://avatars.mds.yandex.net/i?id=045e665d0a0641dc883c980b6b150336_l-4599655-images-thumbs&n=13" alt="Image 3">
+                </div>
+            </div>
+
+            <p>У нас есть залы для любого уровня подготовки – от простых трасс до сложных маршрутов. Все занятия проходят с соблюдением мер безопасности: новичков страхует автоматическая система, а опытные инструкторы всегда подскажут и помогут.
+
+Для юных скалолазов – специальные зоны с яркими и захватывающими трассами. Гибкие условия посещения: абонементы, выгодные скидки и персональные тренировки.
+
+Перед визитом обязательно изучите <a href="">правила</a> безопасности – чтобы покорение вершин было в радость! ⛰️</p>
+        </main>
+        <footer>
+            <p>E-mail:</p>
+            <p>Телефон</p>
+        </footer>
+    </body>
+</html>
